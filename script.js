@@ -2,7 +2,6 @@ const API_KEY = "8e68f00037a84293b2b45453251208";
 const searchBtn = document.getElementById("searchBtn");
 const cityInput = document.getElementById("cityInput");
 
-// जब पेज लोड हो तो लोकेशन से weather दिखाए
 window.addEventListener("load", () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -13,15 +12,13 @@ window.addEventListener("load", () => {
     }
 });
 
-// जब search button क्लिक हो
+
 searchBtn.addEventListener("click", () => {
     const city = cityInput.value.trim();
     if (city) {
         fetchWeather(city);
     }
 });
-
-// Weather API से data लाना
 async function fetchWeather(query) {
     try {
         const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${query}&aqi=no`;
@@ -33,7 +30,6 @@ async function fetchWeather(query) {
             return;
         }
 
-        // Data DOM में set करना
         document.getElementById("tempC").innerHTML = `${data.current.temp_c}°C`;
         document.getElementById("tempF").innerHTML = `${data.current.temp_f}°F`;
         document.getElementById("weatherDesc").innerHTML = data.current.condition.text;
@@ -52,3 +48,4 @@ async function fetchWeather(query) {
         alert("Something went wrong. Please try again.");
     }
 }
+
