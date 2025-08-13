@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body class="red lighten-5 black-text">
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper center-align blue lighten-2">
+            <a href="#" class="brand-logo">Weather_App</a>
+        </div>
+    </nav>
+
+    <!-- Search Box -->
+    <div class="container center-align">
+        <div class="section row">
+            <div class="input-field col s12">
+                <input id="cityInput" type="text" class="validate">
+                <label for="cityInput">Enter City:</label>
+                <a id="searchBtn" class="btn-floating btn-large waves-effect waves-light blue lighten-2">
+                    <i class="material-icons">search</i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Temperature Section -->
+        <div class="section col green lighten-4 card-panel">
+            <h2 id="tempC">--°C</h2>
+            <h2 id="tempF">--°F</h2>
+            <p id="weatherDesc">--</p>
+        </div>
+
+        <!-- Weather Details -->
+        <div class="section col blue lighten-2 card-panel">
+            <img id="weatherIcon" src="" alt="icon" class="icon responsive-img">
+            <h2 id="locationName">--</h2>
+            <p>Feels like: <span id="feelsLike">--</span>°C</p>
+            <p>Visibility: <span id="visibility">--</span> km</p>
+            <p>Wind: <span id="windSpeed">--</span> kph</p>
+            <p>Wind Direction: <span id="windDir">--</span></p>
+            <p>Humidity: <span id="humidity">--</span>%</p>
+            <p>UV Index: <span id="uvIndex">--</span></p>
+            <p>Pressure: <span id="pressure">--</span> in</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer blue lighten-2">
+        <div class="footer-copyright">
+            <div class="container">
+                <h6>Design and Copyright © WeatherApp</h6>
+                <a class="grey-text text-lighten-4 right" href="#!">Aman Saini</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+ <script src="config.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+</body>
+</html>

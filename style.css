@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+p {
+    font-style: italic;
+    font-size: 18px;
+    color: white;
+}
+
+h2 {
+    font-style: oblique;
+}
+
+.temperature-description {
+    color: blue;
+}
